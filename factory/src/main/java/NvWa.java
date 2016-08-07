@@ -1,12 +1,12 @@
 public class NvWa {
     public static void main(String[] args) {
-        AbstractHumanFactory yinYanglu = new HumanFactory();
-        Human whiteHuman = yinYanglu.createHuman(WhiteHuman.class);
-        Human blackHuman = yinYanglu.createHuman(BlackHuman.class);
-        Human yellowHuman = yinYanglu.createHuman(YellowHuman.class);
-
+        Human whiteHuman = new WhiteHumanFactory().createHuman();
         whiteHuman.talk();
+
+        Human blackHuman = new BlackHumanFactory().createHuman();
         blackHuman.talk();
+
+        Human yellowHuman = new YellowHumanFactory().createHuman();
         yellowHuman.talk();
     }
 }
